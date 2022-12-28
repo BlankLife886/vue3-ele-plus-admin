@@ -1,9 +1,8 @@
 import { createStore } from "vuex";
+import user from "./modules/user";
 
 export default createStore({
-  state: {},
-  getters: {},
-  mutations: {},
-  actions: {},
-  modules: {},
+  modules: {
+    user, // 注册user模块
+  },
 });
