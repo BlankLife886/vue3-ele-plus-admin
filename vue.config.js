@@ -12,6 +12,15 @@ module.exports = {
       },
     },
   },
+  configureWebpack: {
+    // 处理node path 引发的问题
+    resolve: {
+      fallback: {
+        path: require.resolve("path-browserify"),
+      },
+    },
+  },
+
   chainWebpack(config) {
     // 设置 svg-sprite-loader
     config.module.rule("svg").exclude.add(resolve("src/icons")).end();

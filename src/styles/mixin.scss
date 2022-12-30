@@ -1,0 +1,34 @@
+/* 定义通用样式 */
+/* 混合指令（Mixin）用于定义可重复使用的样式,  使用 @include 指令引用混合样式，格式是在其后添加混合名称，以及需要的参数 */
+// 清除浮动
+@mixin clearfix {
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin scrollBar {
+  &::-webkit-scrollbar-track-piece {
+    background: #d3dce6;
+  }
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: #99a9bf;
+    border-radius: 20px;
+  }
+}
+
+@mixin relative {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+
+

@@ -101,7 +101,6 @@ const handleLogin = () => {
   // 表单校验
   loginFormRef.value.validate((valid) => {
     if (!valid) return;
-    console.log(loginFormRef.value);
     loading.value = true;
     // 触发登录动作
     store
